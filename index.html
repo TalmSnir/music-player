@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link type="text/css" rel="stylesheet" href="style.css" />
+
+    <title>Music-Player</title>
+  </head>
+  <body>
+    <div class="music-container">
+      <div class="album-info">
+        <h3 id="song-title">Song Title</h3>
+        <div class="progress-container">
+          <div class="progress"></div>
+        </div>
+      </div>
+
+      <audio src="#" id="audio"></audio>
+
+      <div class="img-container">
+        <img src="#" alt="album-artwork" id="album-cover" />
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-small" id="backward">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button class="btn btn-large" id="play">
+          <i class="fas fa-play"> </i>
+        </button>
+        <!--<button class="btn btn-Large"><i class="fas fa-pause"></i></button>-->
+        <button class="btn btn-small" id="forward">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7de0d60bf7.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

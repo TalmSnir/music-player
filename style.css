@@ -1,0 +1,123 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.music-container {
+  display: flex;
+  background-color: black;
+  border-radius: 20px;
+  box-shadow: 0 20px 20px 0 white;
+  position: relative;
+  padding: 1em 1em;
+  z-index: 10;
+}
+
+.album-info {
+  background-color: gray;
+  position: absolute;
+  top: 0;
+  width: 60%;
+  padding: 0.5em 2em 1em 5.5em;
+  z-index: 0;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.album-info h3 {
+  margin: 0;
+}
+
+.progress-container {
+  background: white;
+  border-radius: 0.2em;
+  cursor: pointer;
+  margin: 0.5em 0;
+  height: 0.2em;
+  width: 100%;
+}
+.progress-container .progress {
+  background-color: black;
+  height: 100%;
+  width: 0%;
+}
+
+.music-container.play .album-info {
+  transform: translateY(-100%);
+  opacity: 1;
+}
+.img-container {
+  position: relative;
+  width: 5em;
+}
+
+.img-container::after {
+  content: "";
+  background-color: black;
+  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-container img {
+  border-radius: 50%;
+  width: inherit;
+  height: 5em;
+  object-fit: cover;
+  animation: spin 4s linear infinite;
+  animation-play-state: paused;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.music-container.play .img-container img {
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1;
+}
+.btn {
+  background-color: black;
+  color: white;
+  border: 0;
+  margin: 0 1.2em;
+  cursor: pointer;
+}
+.btn-small {
+  font-size: 1.3em;
+}
+.btn-large {
+  font-size: 1.8em;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+.btn:focus {
+  outline: none;
+}
